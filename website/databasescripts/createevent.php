@@ -17,6 +17,15 @@ OpenCon();
 $sql = "SELECT * FROM 'events'";
 $result = mysqli_query($conn, $sql);
 
+if ($conn->connect_errno) {
+    printf("Connect failed: %s\n", $conn->connect_error);
+    exit();
+}
+
+if (!$conn->query("SET a=1")) {
+    printf("Error message: %s\n", $conn->error);
+}
+
 // if (mysqli_num_rows($result) > 0) {
 //   // writes the data to screen
 //   while($row = mysqli_fetch_assoc($result)) {
