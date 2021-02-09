@@ -1,4 +1,5 @@
 <?php
+echo("test");
 /*
 TODO support file upload https://www.w3schools.com/php/php_file_upload.asp
 */
@@ -48,4 +49,3 @@ if ($result->num_rows > 0) {
 // echo("oijfdw");
 var_dump($result);
 closecon($conn);
-?>
