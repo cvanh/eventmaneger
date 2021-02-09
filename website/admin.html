@@ -21,7 +21,7 @@
         </a>
     </div>
     <div id="content">
-        <form action="./databasescripts/createevent.php" id="formulier_admin">
+        <form method="POST" action="./databasescripts/createevent.php" id="formulier_admin">
             <label>voer de waarde in de volgende velden toe</label>
             <br />
             <input id="titel_event" type="text" placeholder="titel" /> <br /><br />
@@ -31,7 +31,7 @@
             <input id="locatie_event" type="text" placeholder="locatie" /><br /><br />
             <!-- TODO make a location picker -->
             <label>de beschrijving van het evenement</label>
-            <textarea name="message" rows="10" cols="30">
+            <textarea id="bericht" name="message" rows="10" cols="30">
                 
                 </textarea> <br /><br />
             <label>de ticket prijs</label>
