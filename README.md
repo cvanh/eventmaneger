@@ -20,10 +20,10 @@ constantijn: admin gedeelte
 tom: front end
 maiko: details pagina
 
-nb bsprint2:
+sprint2:
 
 sprint3:
-
+PARCOUR TIME
 
 sprint4:
 alles af hebben en eventueel bugs fixen

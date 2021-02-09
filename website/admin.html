@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event planner</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/admin.css" </head>
+
+<body>
+    <div id="header">
+        <a href="./index.html">
+            <div id="logo_button" class="header_button">event maneger</div>
+        </a>
+        <a href="./index.html">
+            <div class="header_button">events</div>
+        </a>
+        <a href="./admin.html">
+            <div class="header_button">inloggen orginisatoren</div>
+        </a>
+    </div>
+    <div id="content">
+        <form action="./databasescripts/createevent.php" id="formulier_admin">
+            <label>voer de waarde in de volgende velden toe</label>
+            <br />
+            <input id="titel_event" type="text" placeholder="titel" /> <br /><br />
+            <label>voeg hier de foto aan toe</label>
+            <input id="foto_event" type="file" placeholder="foto" /><br /><br />
+            <label>locatie van het evenement</label>
+            <input id="locatie_event" type="text" placeholder="locatie" /><br /><br />
+            <!-- TODO make a location picker -->
+            <label>de beschrijving van het evenement</label>
+            <textarea name="message" rows="10" cols="30">
+                
+                </textarea> <br /><br />
+            <label>de ticket prijs</label>
+            <input id="price_event" type="text" placeholder="prijs" /><br /><br />
+            <label>titel van het evenement</label>
+            <input id="titel_event" type="text" placeholder="titel" /><br /><br />
+            <label>wie kan het evenement verwijderen?</label>
+            <input id="permissions_event" type="text" placeholder="wie kan het bewerken?" /><br /><br />
+            <!--TODO make permission system-->
+            <input type="submit">
+        </form>
+    </div>
+    <div id="footer">
+        <h1>footer</h1>
+    </div>
+</body>
+
+</html>
