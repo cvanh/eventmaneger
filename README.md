@@ -28,25 +28,12 @@ PARCOUR TIME
 sprint4:
 alles af hebben en eventueel bugs fixen
 
+git commands:
+om te beginnen met werken 
+git flow feature start frontend
+
+en als je klaar bent:
+git flow feature finish frontend
 
 
 
-
-aantekening constantijn:
-wat moet er in het database
-
-database: users
-id - van een persoon - primary field
-username
-password
-permissions
-admin?
-
-database: artikelen
-id_event - primary field
-titel_event
-foto_event
-locatie_event
-description_event
-prijs_event
-who can edit

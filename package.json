@@ -1,0 +1,19 @@
+{
+  "name": "eventmaneger",
+  "version": "1.0.0",
+  "description": "trello board:\r https://trello.com/b/G9TfI2eu/groep-7-eventmanager",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cvanh/eventmaneger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvanh/eventmaneger/issues"
+  },
+  "homepage": "https://github.com/cvanh/eventmaneger#readme"
+}
