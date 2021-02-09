@@ -1,5 +1,4 @@
 <?php
-echo("test");
 /*
 TODO support file upload https://www.w3schools.com/php/php_file_upload.asp
 */
@@ -15,37 +14,24 @@ OpenCon();
 // $permissions_event = htmlspecialchars($_POST['permissions_event']);
 
 
-$sql = "SELECT * FROM 'events'";
+$sql = "SELECT * FROM events";
 $result = mysqli_query($conn, $sql);
-
-if ($conn->connect_errno) {
-    printf("Connect failed: %s\n", $conn->connect_error);
-    exit();
-}
-
-if (!$conn->query("SET a=1")) {
-    printf("Error message: %s\n", $conn->error);
-}
-
-// if (mysqli_num_rows($result) > 0) {
-//   // writes the data to screen
-//   while($row = mysqli_fetch_assoc($result)) {
-//     echo "naam evenement: " . $row["titel_event"]. " prijs evenement: " . $row["price_event"]. " start evenement: " . $row["start_event"]. "<br>";
-//   }
-// } else {
-//   echo "0 results";
-// }
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
+      echo ("<button class='deletebutton' id='deletebutton" . $row["id_event"] . "'>verwijderen</button>");
+      echo ("<button class='editbutton' id='editbutton" . $row["id_event"] . "'>edit</button>");
       echo "naam evenement: " . $row["titel_event"]. " prijs evenement: " . $row["price_event"]. " start evenement: " . $row["start_event"] . "<br>";
     }
   } else {
     echo "0 results";
   }
+
+  $sqldelete = "DELETE FROM comment WHERE id_comment=" . //TODO ADD THE EVENT_ID;
+  // DELETE FROM comments WHERE id_comment='commentid' ; de sql vraag
+      //$id_comment = $_GET['verwijder comment'];
+      //$commentdelete = $conn ->query($sqldelete); 
+
 // $gebruikersnaam_comment = htmlspecialchars($_POST['gebruikersnaam_comment']);
-// var_dump($_POST);
-// echo("oijfdw");
-var_dump($result);
 closecon($conn);
