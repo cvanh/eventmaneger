@@ -1,4 +1,3 @@
-
 <?php
 /*
 MEER SPAGGETI DAN EEN ITALIAANS RESTAURANT
@@ -19,10 +18,18 @@ if ($result->num_rows > 0) {
       echo("<br>");
     }
   } else {
-    echo "0 results";
+    echo "0 evenementen";
   }
+var_dump($_GET);
+$id = $_GET['id'];
+if($id == NULL){
+    echo("<script>alert('id is NULL')</script>");
+} else{
+    echo("<script>alert('tweede statement')</script>");
+}
 
-function removeevent($id_event){
+function remove_event($id_event){
+  $remove_event_id = $_GET['id'];
   echo ("<script type='text/javascript'>alert('aaaaaaaaaaaaa" . $id_event . "');</script>");
 }
 
