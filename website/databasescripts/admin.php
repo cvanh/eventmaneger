@@ -19,10 +19,11 @@ if ($result->num_rows > 0) {
       echo("<br>");
     }
   } else {
-    echo "0 results";
+    echo "0 evenementen";
   }
 
-function removeevent($id_event){
+function remove_event($id_event){
+  $remove_event_id = $_GET['id'];
   echo ("<script type='text/javascript'>alert('aaaaaaaaaaaaa" . $id_event . "');</script>");
 }
 
