@@ -4,18 +4,18 @@ var xhttp = new XMLHttpRequest();
 for (let index = 0; index < buttons.length; index++) {
     const deletebutton = buttons[index];
     deletebutton.addEventListener('click', function(event){
-        let id = getAttribute('id')
-        event.preventDefault();
-        // alert(this.getAttribute('id'));
+        let id = this.getAttribute('id')
+        // event.preventDefault();
+        alert(this.getAttribute('id'));
         xhttp.open("GET", "databasescripts/admin.php?id="+id, true); 
         xhttp.send();
     })
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            // console.log(this.responseText);
-            alert(id);
-        }
-    };    
+    // xhttp.onreadystatechange = function() {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //         // console.log(this.responseText);
+    //         alert(id);
+    //     }
+    // };    
 }
 
 // var selectbox = document.getElementById("change_evenementen");
