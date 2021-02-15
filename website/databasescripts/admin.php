@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
     // echo("<div id ='eventrow".$row["id_event"] . "'>" );
     echo("<div style='display: block;' class='eventrow'>");
     echo ("<input value='verwijder' type='button' class='deleteevent' id='deletebutton" . $row["id_event"] . "'>");
-    echo ("<button class='editevent' id='editbutton" . $row["id_event"] . "'>edit</button>");
+    echo ("<button onclick='edit_event()' class='editevent' id='editbutton" . $row["id_event"] . "'>edit</button>");
     echo "naam evenement: " . $row["titel_event"] . " prijs evenement: " . $row["price_event"] . " start evenement: " . $row["start_event"];
     echo("</div>");
     echo ("<br>");

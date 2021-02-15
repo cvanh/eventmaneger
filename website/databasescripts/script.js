@@ -11,6 +11,10 @@ for (let index = 0; index < buttons.length; index++) {
         event.preventDefault(); // no bueno reload
         xhttp.open("GET", "admin.php?id="+id, true); // makes the get request
         xhttp.send(); // sends xhr request
-        location.reload(); 
+        location.reload();
     })}
 // the edit part of this script
+function edit_event(id_edit){
+    window.location.assign("./edit_event.php");
+    alert(id_event);
+}
