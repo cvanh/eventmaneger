@@ -27,7 +27,7 @@ $id = $_GET['id']; // fetches the event id from a xhr request
 if ($id == NULL) {
  //niks
 } else {
-  $id = str_replace("deletebutton","",$id);
+  // $id = str_replace("deletebutton","",$id);
   $sql_delete_event = "DELETE FROM events WHERE id_event =" . $id; // fixit returns deletebuttonNUMMBER but supposed to return only NUMBER
   $result = mysqli_query($conn, $sql_delete_event);
   var_dump($result);

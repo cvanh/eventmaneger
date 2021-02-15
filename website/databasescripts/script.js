@@ -4,12 +4,14 @@ var xhttp = new XMLHttpRequest();
 for (let index = 0; index < buttons.length; index++) {
     const deletebutton = buttons[index];
     deletebutton.addEventListener('click', function(event){
-        let id = this.getAttribute('id');
-        // id.replace("deletebutton","");
-        event.preventDefault();
-        alert(id);
-        xhttp.open("GET", "admin.php?id="+id, true); 
-        xhttp.send();
+        // let id = this.getAttribute('id'); // declares id as deletebuttonX
+        let id = doc
+        id.style.display = "none"; 
+        id = id.replace("deletebutton",""); // removes deltebutton so only the number remains
+        event.preventDefault(); // no bueno reload
+        // alert(id);
+        xhttp.open("GET", "admin.php?id="+id, true); // makes the get request
+        xhttp.send(); // sends xhr request
         // location.reload(); 
     })
     // xhttp.onreadystatechange = function() {
