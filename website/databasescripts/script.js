@@ -4,18 +4,22 @@ var xhttp = new XMLHttpRequest();
 for (let index = 0; index < buttons.length; index++) {
     const deletebutton = buttons[index];
     deletebutton.addEventListener('click', function(event){
-        let id = getAttribute('id')
-        event.preventDefault();
-        // alert(this.getAttribute('id'));
-        xhttp.open("GET", "databasescripts/admin.php?id="+id, true); 
-        xhttp.send();
+        // let id = this.getAttribute('id'); // declares id as deletebuttonX
+        let id = doc
+        id.style.display = "none"; 
+        id = id.replace("deletebutton",""); // removes deltebutton so only the number remains
+        event.preventDefault(); // no bueno reload
+        // alert(id);
+        xhttp.open("GET", "admin.php?id="+id, true); // makes the get request
+        xhttp.send(); // sends xhr request
+        // location.reload(); 
     })
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            // console.log(this.responseText);
-            alert(id);
-        }
-    };    
+    // xhttp.onreadystatechange = function() {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //         // console.log(this.responseText);
+    //         alert(id);
+    //     }
+    // };    
 }
 
 // var selectbox = document.getElementById("change_evenementen");
