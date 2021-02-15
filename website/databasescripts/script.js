@@ -15,6 +15,6 @@ for (let index = 0; index < buttons.length; index++) {
     })}
 // the edit part of this script
 function edit_event(id_edit){
-    window.location.assign("./edit_event.php");
+    window.location.assign("./edit_event.php?id_edit="+ id_edit);
     alert(id_event);
 }
