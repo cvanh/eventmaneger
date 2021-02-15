@@ -4,11 +4,13 @@ var xhttp = new XMLHttpRequest();
 for (let index = 0; index < buttons.length; index++) {
     const deletebutton = buttons[index];
     deletebutton.addEventListener('click', function(event){
-        let id = this.getAttribute('id')
-        // event.preventDefault();
-        alert(this.getAttribute('id'));
-        xhttp.open("GET", "databasescripts/admin.php?id="+id, true); 
+        let id = this.getAttribute('id');
+        // id.replace("deletebutton","");
+        event.preventDefault();
+        alert(id);
+        xhttp.open("GET", "admin.php?id="+id, true); 
         xhttp.send();
+        // location.reload(); 
     })
     // xhttp.onreadystatechange = function() {
     //     if (this.readyState == 4 && this.status == 200) {

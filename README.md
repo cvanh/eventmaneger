@@ -23,7 +23,7 @@ maiko: details pagina
 sprint2:
 
 sprint3:
-PARCOUR TIME
+PARCOUR TIME alles af hebben
 
 sprint4:
 alles af hebben en eventueel bugs fixen
