@@ -1,9 +1,13 @@
 <?php
+
+// FIXIT TODO
 $titel_event = htmlspecialchars($_POST['titel_event']);
+// $foto_event = htmlspecialchars($_POST['foto_event']);
 $locatie_event = htmlspecialchars($_POST['locatie_event']);
-$foto_event = htmlspecialchars($_POST['foto_event']);
-$beschrijving_event = htmlspecialchars($_POST['beschrijving_event']);
+$bericht = htmlspecialchars($_POST['bericht']);
 $price_event = htmlspecialchars($_POST['price_event']);
+$titel_event = htmlspecialchars($_POST['titel_event']);
+// $permissions_event = htmlspecialchars($_POST['permissions_event']);
 
 var_dump($_POST);
 /*

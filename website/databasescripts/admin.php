@@ -10,13 +10,13 @@
 </head>
 <body>
     <div id="header">
-        <a href="./index.html"><div id="logo_button" class="header_button">
+        <a href="../index.html"><div id="logo_button" class="header_button">
             event maneger
         </div></a>
-        <a href="./index.html"><div class="header_button">
+        <a href="../index.html"><div class="header_button">
             events
         </div></a>
-        <a href="./databasescripts/admin.php"><div class="header_button">
+        <a href="../databasescripts/admin.php"><div class="header_button">
             inloggen orginisatoren
         </div></a>
     </div>
