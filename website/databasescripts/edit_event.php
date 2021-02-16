@@ -6,11 +6,11 @@ $id_edit = $_GET['id_edit'];
 // var_dump($id_edit);
 
 $sql = "SELECT * FROM `events` WHERE id_event =" . $id_edit;
-$result = mysqli_query($conn, $sql);
+$result = $conn->query($sql) or die($conn->error);
 $row = $result->fetch_assoc();
 // var_dump($row)
 ?>
- <form method="POST" action="./databasescripts/createevent.php" id="formulier_admin">
+ <form method="POST" action="./insert_event.php" id="formulier_admin">
             <label>voer de waarde in de volgende velden toe</label>
             <br />
             <!-- <input value="<?php echo ($row['titel_event']);?>" id="titel_event" type="text" /> <br /><br /> -->
@@ -36,4 +36,45 @@ $row = $result->fetch_assoc();
             <!--TODO make permission system-->
             <input type="submit">
         </form>
-<?php closecon($conn);?>
+<?php 
+if (isset($_FILES['image'])) {
+    $errors= array();
+    $file_name = $_FILES['image']['name'];
+    $file_size = $_FILES['image']['size'];
+    $file_tmp = $_FILES['image']['tmp_name'];
+    $file_type = $_FILES['image']['type'];
+    $file_ext = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+    
+    $extensions= array("jpg");
+    
+    if (in_array($file_ext,$extensions)=== false) {
+        $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+    }
+    
+    // if($file_size > 2097152){
+    //    $errors[]='File size must be excately 2 MB';
+    // }
+    
+    if (empty($errors) == true) {
+        //upload for the file.
+        move_uploaded_file($file_tmp,$_SERVER['DOCUMENT_ROOT']."../CDN/IMG/".$file_name);
+
+        // // Formuleer query
+        // $sql = "INSERT INTO `fotoalbums` (`foto`) VALUES ('{$file_name}')";
+        // // Poging uitvoeren query
+        // if ($conn->query($sql) === TRUE) {
+        //     // Uitvoeren query gelukt
+        //     echo "Nieuwe profielfoto succesvol toegevoegd aan tabel 'foto'.";
+        // } else {
+        //     // Uitvoeren query mislukt
+        //     echo "Error: " . $sql . "<br>" . $conn->error;
+        // }
+        // Afsluiten verbinding
+        $conn->close();
+
+    } else {
+        print_r($errors);
+    }
+}
+
+closecon($conn);?>
