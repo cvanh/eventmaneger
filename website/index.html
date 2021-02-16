@@ -1,55 +1,81 @@
 <!DOCTYPE html>
-<html lang="nl">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Mijn portfolio</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event planner</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/events.css">
 </head>
-
 <body>
-    <header>
-        <h1>homepagina</h1>
-        <nav>
-            <ul>
-                Menu:
-                <li>
-                    <a href="index.html">homepagina</a>
-                </li>
-
-                <li>
-                    <a href="piano/Opdracht_1/oefening e - piano/piano.html">Piano</a>
-                </li>
-                <li>
-                    <a href="Rknmachine/rekenmachine/rekenmachine.html">Rekenmachine</a>
-                </li>
-                <li>
-                    <a href="bestelformulier/Opdracht_2/bestelformulier/index.html">Bestelformulier</a>
-                </li>
-                <li>
-                    <a href="gallerij.html">Kaarten</a>
-                </li>
-            </ul>
-
-        </nav>
-    </header>
-
-    <div>
-        <div class="project_1">
-            <p>Dit wordt onze website</p>
+    <div id="header">
+        <a href="./index.html"><div id="logo_button" class="header_button">
+            event maneger
+        </div></a>
+        <a href="./index.html"><div class="header_button">
+            events
+        </div></a>
+        <a href="./databasescripts/admin.php"><div class="header_button">
+            inloggen orginisatoren
+        </div></a>
+    </div>
+    <div id="content">
+        <div class="event_card">
+            <div class="event_card_upper">
+                <img src="./CDN/img/IMG_3052.jpg">
+            </div>
+            <div class="event_card_lower">
+                <div class="event_card_price">price</div>
+                <div class="event_card_location">locatie</div>
+                <div class="event_card_title">naam event</div>
+                <div class="event_card_tickets">aantal kaarten</div>
+                <a href="#"><div class="event_card_details">details</div></a>
+            </div>
 
         </div>
-        <footer>
-            Contact:
-            <a href="mailto:200501@student.glu.nl">Stuur mij een email.<br>
-            </a>
-            Telefoonnummer: 0612345678
-        </footer>
+        <div class="event_card">
+            <div class="event_card_upper">
+                <img src="./CDN/img/IMG_3052.jpg">
+            </div>
+            <div class="event_card_lower">
+                <div class="event_card_price">price</div>
+                <div class="event_card_location">locatie</div>
+                <div class="event_card_title">naam event</div>
+                <div class="event_card_tickets">aantal kaarten</div>
+                <a href="#"><div class="event_card_details">details</div></a>
+            </div>
 
-        <script src="assets/js/script.js"></script>
+        </div>
+        <div class="event_card">
+            <div class="event_card_upper">
+                <img src="./CDN/img/IMG_3052.jpg">
+            </div>
+            <div class="event_card_lower">
+                <div class="event_card_price">price</div>
+                <div class="event_card_location">locatie</div>
+                <div class="event_card_title">naam event</div>
+                <div class="event_card_tickets">aantal kaarten</div>
+                <a href="#"><div class="event_card_details">details</div></a>
+            </div>
+
+        </div>
+        <div class="event_card">
+            <div class="event_card_upper">
+                <img src="./CDN/img/IMG_3052.jpg">
+            </div>
+            <div class="event_card_lower">
+                <div class="event_card_price">price</div>
+                <div class="event_card_location">locatie</div>
+                <div class="event_card_title">naam event</div>
+                <div class="event_card_tickets">aantal kaarten</div>
+                <a href="#"><div class="event_card_details">details</div></a>
+            </div>
+
+        </div>
+    </div>
+    <div id="footer">
+        <b>copyright 2021 imaretarded.dev</b>
+    </div>
+    
 </body>
-
 </html>

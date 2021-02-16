@@ -32,18 +32,18 @@ include "../databaselogin.php";
 OpenCon(); // starts connection with database
 
 // the view code this also generates the buttons ---------------------------------------------------------------------------
-$sql = "SELECT * FROM events";
+$sql = "SELECT * FROM `events` ORDER BY `events`.`start_event` DESC ";
 $result = mysqli_query($conn, $sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while ($row = $result->fetch_assoc()) {
     // echo("<div id ='eventrow".$row["id_event"] . "'>" );
     echo("<div style='display: block;' class='eventrow'>");
-    echo ("<input value='verwijder' type='button' class='deleteevent' id='deletebutton" . $row["id_event"] . "'>");
-    echo ("<button onclick='edit_event()' class='editevent' id='editbutton" . $row["id_event"] . "'>edit</button>");
-    echo "naam evenement: " . $row["titel_event"] . " prijs evenement: " . $row["price_event"] . " start evenement: " . $row["start_event"];
-    echo("</div>");
-    echo ("<br>");
+      echo ("<input value='verwijder' type='button' class='deleteevent' id='deletebutton" . $row["id_event"] . "'>");
+        echo ("<button onclick='edit_event(". $row['id_event'] . ")' class='editevent' id='editbutton" . $row["id_event"] . "'>edit</button>");
+          echo "naam evenement: " . $row["titel_event"] . " prijs evenement: " . $row["price_event"] . " start evenement: " . $row["start_event"];
+            echo("</div>");
+              echo ("<br>");
   }
 } else {
   echo "0 evenementen";
@@ -59,14 +59,13 @@ if ($id == NULL) {
 } else {
   // $id = str_replace("deletebutton","",$id);
   $sql_delete_event = "DELETE FROM events WHERE id_event =" . $id; // fixit returns deletebuttonNUMMBER but supposed to return only NUMBER
-  $result = mysqli_query($conn, $sql_delete_event);
-  var_dump($result);
+    $result = mysqli_query($conn, $sql_delete_event);
 }
 
 
 closecon($conn); // closes connection with database
 ?>
-    </div>
+    </div> 
     <div id="footer">
         <h1>footer</h1>
     </div>

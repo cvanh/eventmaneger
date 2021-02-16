@@ -1,0 +1,38 @@
+.event_card{
+    background-color: green;
+    height: 300px;
+    width: 25%;
+    border: black saddlebrown;
+    border-style: solid;
+    margin: 40px;
+    display: inline-block;
+}
+.event_card_upper{
+ background-color: tomato;
+ height: 50%;
+ border-top: black;
+}
+.event_card_upper img {
+    height: 100%;
+    width: 100%;
+}
+.event_card_lower{
+    background-color: firebrick;
+    height: 50%;
+}
+.event_card_price{
+
+}
+.event_card_location{
+float: left;
+}
+.event_card_title{
+text-align: center;
+}
+.event_card_tickets{
+float: left;
+}
+.event_card_details{
+float: right;
+margin-bottom: 2px;
+}
