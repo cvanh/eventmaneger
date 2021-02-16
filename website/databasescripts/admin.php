@@ -1,26 +1,24 @@
-<script src="script.js"></script>
+</html>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>event planner</title>
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/admin.css"/>
-   </head>
-
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/events.css">
+</head>
 <body>
     <div id="header">
-        <a href="./index.html">
-            <div id="logo_button" class="header_button">event maneger</div>
-        </a>
-        <a href="./index.html">
-            <div class="header_button">events</div>
-        </a>
-        <a href="./admin.html">
-            <div class="header_button">inloggen orginisatoren</div>
-        </a>
+        <a href="./index.html"><div id="logo_button" class="header_button">
+            event maneger
+        </div></a>
+        <a href="./index.html"><div class="header_button">
+            events
+        </div></a>
+        <a href="./databasescripts/admin.php"><div class="header_button">
+            inloggen orginisatoren
+        </div></a>
     </div>
     <div id="content">
     <?php
@@ -65,10 +63,10 @@ if ($id == NULL) {
 
 closecon($conn); // closes connection with database
 ?>
-    </div> 
-    <div id="footer">
-        <h1>footer</h1>
     </div>
+    <div id="footer">
+        <b>copyright 2021 imaretarded.dev planning software</b>
+    </div>
+    
 </body>
-
 </html>
