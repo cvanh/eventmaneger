@@ -1,0 +1,18 @@
+.event_card{
+    background-color: green;
+    height: 300px;
+    width: 25%;
+    border: black saddlebrown;
+    border-style: solid;
+}
+.event_card_upper{
+ background-color: tomato;
+ height: 50%;
+ border-top: black;
+}
+.event_card_lower{
+    background-color: firebrick;
+}
+.event_card_lower{
+    background-color: firebrick;
+}
