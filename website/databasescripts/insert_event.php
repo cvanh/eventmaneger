@@ -6,6 +6,11 @@ $beschrijving_event = htmlspecialchars($_POST['beschrijving_event']);
 $price_event = htmlspecialchars($_POST['price_event']);
 
 var_dump($_POST);
+/*
+edit data moet naar het database
+en er moet een formulier gemaakt worden op de data toetevoegen
+file upload doe ik wel
+*/
 
 if (isset($_FILES['image'])) {
     $errors= array();
