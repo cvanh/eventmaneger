@@ -46,5 +46,5 @@ if (isset($_FILES['image'])) {
         print_r($errors);
     }
 }
-
+// kanker is stom
 ?>
