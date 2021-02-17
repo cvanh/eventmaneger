@@ -19,6 +19,9 @@
         <a href="../databasescripts/admin.php"><div class="header_button">
             inloggen orginisatoren
         </div></a>
+        <a href="../databasescripts/insert.html"><div class="header_button">
+            evenement toetevoegen
+        </div></a>
     </div>
     <div id="content">
     <?php

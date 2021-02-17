@@ -25,7 +25,9 @@ OpenCon()
     </div>
     <div id="content">
 <?php
-$sql = "SELECT * FROM `events`";
+$current_date =date("Y-m-d");
+$sql = "SELECT * FROM `events` WHERE start_event <" + $current_date;
+var_dump($sql)
 $result = mysqli_query($conn, $sql);
 if ($result->num_rows > 0) {
   // output data of each row

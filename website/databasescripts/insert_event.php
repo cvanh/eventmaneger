@@ -1,21 +1,28 @@
-<?php
+<head>
+  <meta http-equiv='refresh' content='5; URL=./admin.php'>
+</head>
+<h1>event created/updated redirecting to the admin panel</h1>
 
+<?php
+include "../databaselogin.php";
+OpenCon();
 // FIXIT TODO
 $titel_event = htmlspecialchars($_POST['titel_event']);
 // $foto_event = htmlspecialchars($_POST['foto_event']);
 $locatie_event = htmlspecialchars($_POST['locatie_event']);
-$bericht = htmlspecialchars($_POST['bericht']);
+$description_event = htmlspecialchars($_POST['description_event']);
 $price_event = htmlspecialchars($_POST['price_event']);
-$titel_event = htmlspecialchars($_POST['titel_event']);
+$date_event = htmlspecialchars($_POST['date_event']);
+$number_tickets  = htmlspecialchars($_POST['number_tickets']);
+// $date_event = htmlspecialchars($_POST['date_event']);
 // $permissions_event = htmlspecialchars($_POST['permissions_event']);
 
-var_dump($_POST);
-/*
-edit data moet naar het database
-en er moet een formulier gemaakt worden op de data toetevoegen
-file upload doe ik wel
-*/
+// var_dump($_POST);
 
+$sql_insert = "INSERT INTO `events` (`titel_event`, `locatie_event`, `description_event`, `price_event`, `number_tickets`, `start_event`) VALUES ('" . $titel_event . "', '". $locatie_event . "', '" . $description_event . "', '" . $price_event . "', '" . $number_tickets . "', '" . $date_event. "');";
+$result = mysqli_query($conn, $sql_insert);
+// var_dump($sql_insert);
+// var_dump($result);
 if (isset($_FILES['image'])) {
     $errors= array();
     $file_name = $_FILES['image']['name'];
@@ -55,5 +62,5 @@ if (isset($_FILES['image'])) {
         print_r($errors);
     }
 }
-// kanker is stom
+closecon($conn);
 ?>
