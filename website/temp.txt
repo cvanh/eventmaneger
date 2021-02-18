@@ -1,8 +1,29 @@
-// FIXIT
-// $titel_event = htmlspecialchars($_POST['titel_event']);
-// $foto_event = htmlspecialchars($_POST['foto_event']);
-// $locatie_event = htmlspecialchars($_POST['locatie_event']);
-// $bericht = htmlspecialchars($_POST['bericht']);
-// $price_event = htmlspecialchars($_POST['price_event']);
-// $titel_event = htmlspecialchars($_POST['titel_event']);
-// $permissions_event = htmlspecialchars($_POST['permissions_event']);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event planner</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/events.css">
+</head>
+<body>
+    <div id="header">
+        <a href="./index.html"><div id="logo_button" class="header_button">
+            event maneger
+        </div></a>
+        <a href="./index.html"><div class="header_button">
+            events
+        </div></a>
+        <a href="./databasescripts/admin.php"><div class="header_button">
+            inloggen orginisatoren
+        </div></a>
+    </div>
+    <div id="content">
+
+    <div id="footer">
+        <b>copyright 2021 imaretarded.dev planning software</b>
+    </div>
+</body>
+
+</html>
