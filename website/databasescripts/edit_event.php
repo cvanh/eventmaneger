@@ -33,7 +33,7 @@ $result = $conn->query($sql) or die($conn->error);
 $row = $result->fetch_assoc();
 // var_dump($row)
 ?>
- <form method="POST" action="./insert_event.php" id="formulier_admin">
+ <form method="POST" enctype="multipart/form-data" action="./insert_event.php" id="formulier_admin">
             <label>voer de waarde in de volgende velden toe</label>
             <br />
             <!-- <input value="<?php echo ($row['titel_event']);?>" id="titel_event" type="text" /> <br /><br /> -->

@@ -18,23 +18,23 @@ the coolor cheme is: https://coolors.co/cdb4db-ffc8dd-ffafcc-bde0fe-a2d2ff
     text-align: center;
     height: 50px;
     width: 100%;
-    background-color: #ffafcc8e;
+    background-color: #158467;
 }
 #content{
-background-color: #BDE0FE;
+background-color: #fadcac;
 }
 #footer{
     height: 50px;
     width: 100%;
-    background-color: #CDB4DB;
+    background-color: #158467;
     text-align: center;
 }
 .header_button {
-    height: 30px;
-    width: 10%;
-    background-color: #FFC8DD;
+    min-height: 30px;
+    min-width: 10%;
+    background-color: #197163;
     text-align: center;
-    border: 2px #FFAFCC;
+    border: 2px #065446;
     border-style: solid;
     display: inherit
 }

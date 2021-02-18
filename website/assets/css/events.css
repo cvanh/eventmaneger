@@ -1,14 +1,15 @@
 .event_card{
-    background-color: green;
+    background-color: #fadcac;
     height: 300px;
     width: 25%;
-    border: black saddlebrown;
+    border: #065446;
     border-style: solid;
     margin: 40px;
     display: inline-block;
+    box-shadow: 10px 10px #076957;
 }
 .event_card_upper{
- background-color: tomato;
+ /* background-color: tomato; */
  height: 50%;
  border-top: black;
 }
@@ -17,7 +18,7 @@
     width: 100%;
 }
 .event_card_lower{
-    background-color: firebrick;
+    background-color: #197163;
     height: 50%;
 }
 .event_card_price{
