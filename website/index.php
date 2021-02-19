@@ -13,21 +13,21 @@ OpenCon()
 </head>
 <body>
     <div id="header">
-        <a href="./index.html"><div id="logo_button" class="header_button">
+        <a href="./index.php"><div id="logo_button" class="header_button">
             event maneger
         </div></a>
         <a href="./index.html"><div class="header_button">
             events
         </div></a>
         <a href="./databasescripts/admin.php"><div class="header_button">
-            inloggen orginisatoren
+             orginisatoren panel
         </div></a>
     </div>
     <div id="content">
 <?php
 $current_date =date("Y-m-d");
-$sql = "SELECT * FROM `events` WHERE start_event <" + $current_date;
-var_dump($sql)
+$sql = "SELECT * FROM `events` WHERE start_event >" . $current_date;
+// var_dump($sql);
 $result = mysqli_query($conn, $sql);
 if ($result->num_rows > 0) {
   // output data of each row
@@ -41,7 +41,7 @@ echo("
         <div class='event_card_price'>". $row["price_event"] ."$</div>
         <div class='event_card_location'>". $row["locatie_event"] ."</div>
         <div class='event_card_title'>" . $row["titel_event"] . "</div>
-        <div class='event_card_tickets'>". $row["number_tickets"] ."</div>
+        <div class='event_card_tickets'>". $row["number_tickets"] ." tickets over</div>
         <a href=./details.php?id_event=" . $row["id_event"] ."><div class='event_card_details'>details</div></a>
         </div>
     </div>

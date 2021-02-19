@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="header">
-        <a href="./index.html"><div id="logo_button" class="header_button">
+        <a href="./index.php"><div id="logo_button" class="header_button">
             event maneger
         </div></a>
         <a href="./index.html"><div class="header_button">
@@ -26,7 +26,7 @@
 TODO support file upload https://www.w3schools.com/php/php_file_upload.asp
 */
 include "../databaselogin.php";
-$conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+OpenCon();
 // FIXIT
 // $titel_event = htmlspecialchars($_POST['titel_event']);
 // $foto_event = htmlspecialchars($_POST['foto_event']);
@@ -65,12 +65,8 @@ if ($result->num_rows > 0) {
      $sqldelete = "DELETE FROM events WHERE id_event = '1'";
   }
 
-  function editcomment(){
-    
-  }
-    
 
-$conn -> close();
+closecon($conn);
 ?>
     </div>
     <div id="footer">

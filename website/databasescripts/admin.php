@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="header">
-        <a href="../index.html"><div id="logo_button" class="header_button">
+        <a href="../index.php"><div id="logo_button" class="header_button">
             event maneger
         </div></a>
         <a href="../index.html"><div class="header_button">
@@ -19,7 +19,7 @@
         <a href="../databasescripts/admin.php"><div class="header_button">
             inloggen orginisatoren
         </div></a>
-        <a href="../databasescripts/insert.html"><div class="header_button">
+        <a href="../databasescripts/insert.php"><div class="header_button">
             evenement toetevoegen
         </div></a>
     </div>
@@ -50,7 +50,7 @@ if ($result->num_rows > 0) {
   echo "0 evenementen";
 }
 
-// the delete function --------------------------------------------------------------------------------------
+
 $id = NULL;
 $id = $_GET['id']; // fetches the event id from a xhr request
 
@@ -70,6 +70,6 @@ closecon($conn); // closes connection with database
     <div id="footer">
         <b>copyright 2021 imaretarded.dev planning software</b>
     </div>
-    
+    <script src="./script.js"></script>
 </body>
 </html>
